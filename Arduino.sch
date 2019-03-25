@@ -1,36 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:knielsenlib
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:RPi Hat-cache
-EELAYER 26 0
+EESchema Schematic File Version 4
+LIBS:doorhat-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -45,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ATMEGA328P-A IC?
+L doorhat-rescue:ATMEGA328P-A IC1
 U 1 1 5C846C16
 P 4400 2950
-F 0 "IC?" H 4450 4407 50  0000 C CNN
+F 0 "IC1" H 4450 4407 50  0000 C CNN
 F 1 "ATMEGA328P" H 4450 4316 50  0000 C CNN
 F 2 "Housings_QFP:LQFP-32_7x7mm_Pitch0.8mm" H 4450 4225 50  0000 C CIN
 F 3 "" H 4400 2950 50  0000 C CNN
@@ -56,54 +26,54 @@ F 3 "" H 4400 2950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Crystal Y?
+L doorhat-rescue:Crystal Y1
 U 1 1 5C846C1D
-P 6250 2500
-F 0 "Y?" V 6204 2631 50  0000 L CNN
-F 1 "16MHz" V 6295 2631 50  0000 L CNN
-F 2 "Crystals:Crystal_HC49-U_Vertical" H 6250 2500 50  0001 C CNN
-F 3 "" H 6250 2500 50  0000 C CNN
-	1    6250 2500
+P 7475 2475
+F 0 "Y1" V 7429 2606 50  0000 L CNN
+F 1 "16MHz" V 7520 2606 50  0000 L CNN
+F 2 "Crystals:Crystal_HC49-U_Vertical" H 7475 2475 50  0001 C CNN
+F 3 "" H 7475 2475 50  0000 C CNN
+	1    7475 2475
 	0    1    1    0   
 $EndComp
 $Comp
-L C C?
+L doorhat-rescue:C C1
 U 1 1 5C846C24
-P 6700 2250
-F 0 "C?" V 6448 2250 50  0000 C CNN
-F 1 "22pF" V 6539 2250 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6738 2100 50  0001 C CNN
-F 3 "" H 6700 2250 50  0000 C CNN
-	1    6700 2250
+P 7925 2225
+F 0 "C1" V 7673 2225 50  0000 C CNN
+F 1 "22pF" V 7764 2225 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7963 2075 50  0001 C CNN
+F 3 "" H 7925 2225 50  0000 C CNN
+	1    7925 2225
 	0    1    1    0   
 $EndComp
 $Comp
-L R R?
+L doorhat-rescue:R R13
 U 1 1 5C846C2B
-P 6700 3350
-F 0 "R?" H 6770 3396 50  0000 L CNN
-F 1 "10K" H 6770 3305 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6630 3350 50  0001 C CNN
-F 3 "" H 6700 3350 50  0000 C CNN
-	1    6700 3350
+P 6650 3050
+F 0 "R13" H 6720 3096 50  0000 L CNN
+F 1 "10K" H 6720 3005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6580 3050 50  0001 C CNN
+F 3 "" H 6650 3050 50  0000 C CNN
+	1    6650 3050
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR0116
 U 1 1 5C846C32
-P 7000 2500
-F 0 "#PWR?" H 7000 2250 50  0001 C CNN
-F 1 "GND" V 7005 2372 50  0000 R CNN
-F 2 "" H 7000 2500 50  0000 C CNN
-F 3 "" H 7000 2500 50  0000 C CNN
-	1    7000 2500
+P 8225 2475
+F 0 "#PWR0116" H 8225 2225 50  0001 C CNN
+F 1 "GND" V 8230 2347 50  0000 R CNN
+F 2 "" H 8225 2475 50  0000 C CNN
+F 3 "" H 8225 2475 50  0000 C CNN
+	1    8225 2475
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR0117
 U 1 1 5C846C38
 P 3400 1750
-F 0 "#PWR?" H 3400 1600 50  0001 C CNN
+F 0 "#PWR0117" H 3400 1600 50  0001 C CNN
 F 1 "+5V" H 3415 1923 50  0000 C CNN
 F 2 "" H 3400 1750 50  0000 C CNN
 F 3 "" H 3400 1750 50  0000 C CNN
@@ -111,10 +81,10 @@ F 3 "" H 3400 1750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR0118
 U 1 1 5C846C45
 P 3400 4250
-F 0 "#PWR?" H 3400 4000 50  0001 C CNN
+F 0 "#PWR0118" H 3400 4000 50  0001 C CNN
 F 1 "GND" H 3405 4077 50  0000 C CNN
 F 2 "" H 3400 4250 50  0000 C CNN
 F 3 "" H 3400 4250 50  0000 C CNN
@@ -124,7 +94,7 @@ $EndComp
 Wire Wire Line
 	3500 3950 3400 3950
 Wire Wire Line
-	3400 3950 3400 4250
+	3400 3950 3400 4050
 Wire Wire Line
 	3500 4050 3400 4050
 Connection ~ 3400 4050
@@ -132,7 +102,7 @@ Wire Wire Line
 	3500 4150 3400 4150
 Connection ~ 3400 4150
 Wire Wire Line
-	3400 1750 3400 2450
+	3400 1750 3400 1850
 Wire Wire Line
 	3400 2450 3500 2450
 Wire Wire Line
@@ -145,85 +115,73 @@ Wire Wire Line
 	3500 1850 3400 1850
 Connection ~ 3400 1850
 $Comp
-L C C?
+L doorhat-rescue:C C4
 U 1 1 5C846C59
-P 6700 2750
-F 0 "C?" V 6448 2750 50  0000 C CNN
-F 1 "22pF" V 6539 2750 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6738 2600 50  0001 C CNN
-F 3 "" H 6700 2750 50  0000 C CNN
-	1    6700 2750
+P 7925 2725
+F 0 "C4" V 7673 2725 50  0000 C CNN
+F 1 "22pF" V 7764 2725 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7963 2575 50  0001 C CNN
+F 3 "" H 7925 2725 50  0000 C CNN
+	1    7925 2725
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6850 2250 6950 2250
+	8075 2225 8175 2225
 Wire Wire Line
-	6950 2250 6950 2750
+	8175 2225 8175 2475
 Wire Wire Line
-	6950 2750 6850 2750
+	8175 2725 8075 2725
 Wire Wire Line
-	7000 2500 6950 2500
-Connection ~ 6950 2500
+	8225 2475 8175 2475
+Connection ~ 8175 2475
 Wire Wire Line
-	5900 2250 5900 2450
+	7275 2225 7275 2425
 Wire Wire Line
-	5900 2450 5400 2450
+	7275 2525 7275 2725
 Wire Wire Line
-	5400 2550 5900 2550
+	7275 2725 7475 2725
 Wire Wire Line
-	5900 2550 5900 2750
+	7275 2225 7475 2225
 Wire Wire Line
-	5900 2750 6550 2750
+	7475 2325 7475 2225
+Connection ~ 7475 2225
 Wire Wire Line
-	5900 2250 6550 2250
-Wire Wire Line
-	6250 2350 6250 2250
-Connection ~ 6250 2250
-Wire Wire Line
-	6250 2650 6250 2750
-Connection ~ 6250 2750
+	7475 2625 7475 2725
+Connection ~ 7475 2725
 $Comp
-L C C?
+L doorhat-rescue:C C5
 U 1 1 5C846C6F
-P 6700 3850
-F 0 "C?" H 6585 3804 50  0000 R CNN
-F 1 "100nF" H 6585 3895 50  0000 R CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6738 3700 50  0001 C CNN
-F 3 "" H 6700 3850 50  0000 C CNN
-	1    6700 3850
+P 6650 3550
+F 0 "C5" H 6535 3504 50  0000 R CNN
+F 1 "100nF" H 6535 3595 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6688 3400 50  0001 C CNN
+F 3 "" H 6650 3550 50  0000 C CNN
+	1    6650 3550
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR0119
 U 1 1 5C846C76
-P 6700 3100
-F 0 "#PWR?" H 6700 2950 50  0001 C CNN
-F 1 "+5V" H 6715 3273 50  0000 C CNN
-F 2 "" H 6700 3100 50  0000 C CNN
-F 3 "" H 6700 3100 50  0000 C CNN
-	1    6700 3100
+P 6650 2800
+F 0 "#PWR0119" H 6650 2650 50  0001 C CNN
+F 1 "+5V" H 6665 2973 50  0000 C CNN
+F 2 "" H 6650 2800 50  0000 C CNN
+F 3 "" H 6650 2800 50  0000 C CNN
+	1    6650 2800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 3500 6700 3700
-Connection ~ 6700 3600
+	6650 3200 6650 3300
+Connection ~ 6650 3300
 Wire Wire Line
-	6700 3200 6700 3100
+	6650 2900 6650 2800
 Wire Wire Line
-	5400 3550 6400 3550
-Wire Wire Line
-	5400 3450 6500 3450
-Wire Wire Line
-	6700 3600 6550 3600
-Wire Wire Line
-	6550 3600 6550 3300
-Wire Wire Line
-	6550 3300 5400 3300
+	6650 3300 5400 3300
 $Comp
-L C C?
+L doorhat-rescue:C C2
 U 1 1 5C846C9B
 P 2300 2600
-F 0 "C?" H 2185 2554 50  0000 R CNN
+F 0 "C2" H 2185 2554 50  0000 R CNN
 F 1 "100nF" H 2185 2645 50  0000 R CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2338 2450 50  0001 C CNN
 F 3 "" H 2300 2600 50  0000 C CNN
@@ -231,10 +189,10 @@ F 3 "" H 2300 2600 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR0120
 U 1 1 5C846CA2
 P 2300 2300
-F 0 "#PWR?" H 2300 2150 50  0001 C CNN
+F 0 "#PWR0120" H 2300 2150 50  0001 C CNN
 F 1 "+5V" H 2315 2473 50  0000 C CNN
 F 2 "" H 2300 2300 50  0000 C CNN
 F 3 "" H 2300 2300 50  0000 C CNN
@@ -242,10 +200,10 @@ F 3 "" H 2300 2300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR0121
 U 1 1 5C846CA8
 P 2300 2900
-F 0 "#PWR?" H 2300 2650 50  0001 C CNN
+F 0 "#PWR0121" H 2300 2650 50  0001 C CNN
 F 1 "GND" H 2305 2727 50  0000 C CNN
 F 2 "" H 2300 2900 50  0000 C CNN
 F 3 "" H 2300 2900 50  0000 C CNN
@@ -257,10 +215,10 @@ Wire Wire Line
 Wire Wire Line
 	2300 2750 2300 2900
 $Comp
-L C C?
+L doorhat-rescue:C C3
 U 1 1 5C846CB0
 P 2800 2600
-F 0 "C?" H 2685 2554 50  0000 R CNN
+F 0 "C3" H 2685 2554 50  0000 R CNN
 F 1 "100nF" H 2685 2645 50  0000 R CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2838 2450 50  0001 C CNN
 F 3 "" H 2800 2600 50  0000 C CNN
@@ -268,10 +226,10 @@ F 3 "" H 2800 2600 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR0122
 U 1 1 5C846CB7
 P 2800 2300
-F 0 "#PWR?" H 2800 2150 50  0001 C CNN
+F 0 "#PWR0122" H 2800 2150 50  0001 C CNN
 F 1 "+5V" H 2815 2473 50  0000 C CNN
 F 2 "" H 2800 2300 50  0000 C CNN
 F 3 "" H 2800 2300 50  0000 C CNN
@@ -279,10 +237,10 @@ F 3 "" H 2800 2300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR0123
 U 1 1 5C846CBD
 P 2800 2900
-F 0 "#PWR?" H 2800 2650 50  0001 C CNN
+F 0 "#PWR0123" H 2800 2650 50  0001 C CNN
 F 1 "GND" H 2805 2727 50  0000 C CNN
 F 2 "" H 2800 2900 50  0000 C CNN
 F 3 "" H 2800 2900 50  0000 C CNN
@@ -294,10 +252,10 @@ Wire Wire Line
 Wire Wire Line
 	2800 2750 2800 2900
 $Comp
-L CONN_02X03 P?
+L doorhat-rescue:CONN_02X03 P1
 U 1 1 5C846CCC
 P 4600 5200
-F 0 "P?" H 4600 5515 50  0000 C CNN
+F 0 "P1" H 4600 5515 50  0000 C CNN
 F 1 "ICSP" H 4600 5424 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 4600 4000 50  0001 C CNN
 F 3 "" H 4600 4000 50  0000 C CNN
@@ -305,10 +263,10 @@ F 3 "" H 4600 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L power:GND #PWR0124
 U 1 1 5C846CD3
 P 4950 5400
-F 0 "#PWR?" H 4950 5150 50  0001 C CNN
+F 0 "#PWR0124" H 4950 5150 50  0001 C CNN
 F 1 "GND" H 4955 5227 50  0000 C CNN
 F 2 "" H 4950 5400 50  0000 C CNN
 F 3 "" H 4950 5400 50  0000 C CNN
@@ -316,10 +274,10 @@ F 3 "" H 4950 5400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR?
+L power:+5V #PWR0125
 U 1 1 5C846CD9
 P 4950 5000
-F 0 "#PWR?" H 4950 4850 50  0001 C CNN
+F 0 "#PWR0125" H 4950 4850 50  0001 C CNN
 F 1 "+5V" H 4965 5173 50  0000 C CNN
 F 2 "" H 4950 5000 50  0000 C CNN
 F 3 "" H 4950 5000 50  0000 C CNN
@@ -340,49 +298,123 @@ Wire Wire Line
 	3950 5200 4350 5200
 Wire Wire Line
 	3950 5300 4350 5300
-Text HLabel 1600 1450 0    60   Output ~ 0
-serial_hash
-Wire Wire Line
-	1600 1450 2100 1450
-Text Label 1600 1450 0    60   ~ 0
-serial_hash
-Text Label 5450 3550 0    60   ~ 0
-serial_hash
 $Comp
-L GND #PWR?
+L power:GND #PWR0126
 U 1 1 5C847064
-P 6700 4100
-F 0 "#PWR?" H 6700 3850 50  0001 C CNN
-F 1 "GND" H 6705 3923 50  0000 C CNN
-F 2 "" H 6700 4100 50  0001 C CNN
-F 3 "" H 6700 4100 50  0001 C CNN
-	1    6700 4100
+P 6650 3800
+F 0 "#PWR0126" H 6650 3550 50  0001 C CNN
+F 1 "GND" H 6655 3623 50  0000 C CNN
+F 2 "" H 6650 3800 50  0001 C CNN
+F 3 "" H 6650 3800 50  0001 C CNN
+	1    6650 3800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 4000 6700 4100
+	6650 3700 6650 3725
 Wire Wire Line
 	5400 2150 5700 2150
-Text Label 5450 2150 0    60   ~ 0
-avr_mosi
 Wire Wire Line
 	5400 2250 5700 2250
-Text Label 5450 2250 0    60   ~ 0
-avr_miso
 Wire Wire Line
 	5400 2350 5700 2350
-Text Label 5450 2350 0    60   ~ 0
-avr_clk
-Text Label 3950 5100 0    60   ~ 0
-avr_miso
-Text Label 3950 5200 0    60   ~ 0
-avr_clk
-Text Label 4900 5200 0    60   ~ 0
-avr_mosi
-Text Label 3950 5300 0    60   ~ 0
-avr_reset
-Text Label 5450 3300 0    60   ~ 0
-avr_reset
 Wire Wire Line
 	4850 5200 5350 5200
+Wire Wire Line
+	3400 4050 3400 4150
+Wire Wire Line
+	3400 4150 3400 4250
+Wire Wire Line
+	3400 2150 3400 2450
+Wire Wire Line
+	3400 1950 3400 2150
+Wire Wire Line
+	3400 1850 3400 1950
+Wire Wire Line
+	8175 2475 8175 2725
+Wire Wire Line
+	7475 2225 7775 2225
+Wire Wire Line
+	7475 2725 7775 2725
+Wire Wire Line
+	6650 3300 6650 3400
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5CA4095A
+P 7150 3300
+F 0 "SW?" H 7150 3535 50  0000 C CNN
+F 1 "SW_SPST" H 7150 3444 50  0000 C CNN
+F 2 "" H 7150 3300 50  0001 C CNN
+F 3 "" H 7150 3300 50  0001 C CNN
+	1    7150 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3300 6950 3300
+Wire Wire Line
+	6650 3725 7350 3725
+Wire Wire Line
+	7350 3725 7350 3300
+Connection ~ 6650 3725
+Wire Wire Line
+	6650 3725 6650 3800
+Text GLabel 5500 3550 2    50   Output ~ 0
+serial_hash
+Wire Wire Line
+	5400 3550 5500 3550
+Text GLabel 5500 3450 2    50   Input ~ 0
+serial_program
+Wire Wire Line
+	5400 3450 5500 3450
+Text GLabel 5500 3650 2    50   Input ~ 0
+cardreader_clk
+Wire Wire Line
+	5400 3650 5500 3650
+Text GLabel 5500 3750 2    50   Input ~ 0
+cardreader_data
+Wire Wire Line
+	5400 3750 5500 3750
+Text GLabel 5500 1850 2    50   Input ~ 0
+serial_rfid_data
+Wire Wire Line
+	5400 1850 5500 1850
+Text GLabel 5500 1950 2    50   Output ~ 0
+serial_rfid_enable
+Wire Wire Line
+	5400 1950 5500 1950
+Text GLabel 5500 2050 2    50   Output ~ 0
+mfr_rfid_ss
+Wire Wire Line
+	5400 2050 5500 2050
+Text GLabel 7275 2425 0    50   BiDi ~ 0
+xtal1
+Text GLabel 7275 2525 0    50   BiDi ~ 0
+xtal2
+Text GLabel 5525 2450 2    50   BiDi ~ 0
+xtal1
+Text GLabel 5525 2550 2    50   BiDi ~ 0
+xtal2
+Wire Wire Line
+	5400 2450 5525 2450
+Text GLabel 5700 2150 2    50   Output ~ 0
+mosi
+Text GLabel 5700 2250 2    50   Input ~ 0
+miso
+Text GLabel 5700 2350 2    50   Output ~ 0
+sck
+Text GLabel 3950 5100 0    50   Output ~ 0
+miso
+Text GLabel 3950 5200 0    50   Input ~ 0
+clk
+Text GLabel 5350 5200 2    50   Input ~ 0
+mosi
+Text GLabel 3950 5300 0    50   Output ~ 0
+avr_reset
+Text GLabel 5500 3300 2    50   Input ~ 0
+avr_reset
+Text GLabel 5500 2700 2    50   Output ~ 0
+mfr_rfid_nrstpd
+Wire Wire Line
+	5400 2700 5500 2700
+Wire Wire Line
+	5400 2550 5525 2550
 $EndSCHEMATC
